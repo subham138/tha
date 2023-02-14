@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body id="bodyLoad">
+
+  <!-- <iframe src="https://cprglobalcentre.org.uk/wp-content/uploads/2023/01/prayer.mp3" allow="autoplay" frameborder="0"></iframe> -->
+
+  <audio id="myAudio" controls loop autoplay>
+    <source src="https://cprglobalcentre.org.uk/wp-content/uploads/2023/01/prayer.ogg" type="audio/ogg">
+    <source src="https://cprglobalcentre.org.uk/wp-content/uploads/2023/01/prayer.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button type="button" id="btnPlay" onclick="playAudio()">Play</button>
+  <button type="button" onclick="pauseAudio()">Pause</button>
+
+</body>
+<script>
+  var x = document.getElementById("myAudio");
+
+  function playAudio() {
+    x.play();
+  }
+
+  function pauseAudio() {
+    x.pause();
+  }
+
+  setTimeout(() => {
+    $('#btnPlay').click()
+  }, 5000);
+  // function _play() {
+  //   console.log('here');
+  //   var promise = document.querySelector('#myAudio').play();
+  // }
+  // window.addEventListener("DOMContentLoaded", event => {
+  //   // console.log('hi');
+  //   // const audio = document.querySelector("#btnPlay");
+
+
+  //   // console.log(audio.setAttribute('play', 'play'));
+  //   // audio.volume = 0.2;
+  //   // audio.play();
+  // });
+  // var promise = document.querySelector('#myAudio').play();
+
+  // if (promise !== undefined) {
+  //   promise.then(_ => {
+  //     console.log('Play');
+  //     // Autoplay started!
+  //   }).catch(error => {
+  //     console.log(error);
+  //     // Autoplay was prevented.
+  //     // Show a "Play" button so that user can start playback.
+  //   });
+  // }
+  // window.onload = function() {
+  //   document.getElementById("myAudio").play();
+  // }
+</script>
+
+</html>
